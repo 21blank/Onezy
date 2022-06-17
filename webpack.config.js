@@ -20,5 +20,13 @@ module.exports = {
     devServer: {
         port: 3000, // 端口号
         open: true
+    },
+    module: { 
+        rules: [ // loader的规则
+          {
+            test: /\.css$/, // 匹配所有的css文件
+            use: [ "style-loader", "css-loader"]//解析规则从后往前
+          }
+        ]
     }
 }
