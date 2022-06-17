@@ -1,6 +1,9 @@
 const path = require("path")
  // 引入自动生成 html 的插件
- const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const {VueLoaderPlugin} = require('vue-loader')
+
 module.exports = {
     mode: 'development',
     entry: "./src/main.js", // 指定入口，相对路径
@@ -15,7 +18,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',//建议绝对路径 相对有时会出错 以那个模板执行
             filename: 'index.html'
-          })
+        }),
+        new VueLoaderPlugin()
     ],
     devServer: {
         port: 3000, // 端口号
@@ -51,7 +55,11 @@ module.exports = {
                 use: [{
                   loader: 'babel-loader',
                 }]
-              },
+            },
+            {
+                test: /\.vue/i,
+                use: ['vue-loader']
+              }
         ]
     }
 }
