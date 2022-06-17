@@ -5,3 +5,7 @@ tab()
 marquee()
 
 import "./styles/index.css";
+// import './marquee.js'
+import { marquee } from "./marquee";
+// import './tab.js'
+import { tab } from "./tab";
