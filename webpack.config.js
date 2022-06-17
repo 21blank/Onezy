@@ -45,6 +45,13 @@ module.exports = {
     	            filename: 'fonts.[hash:6][ext]'
                 }
             },
+            {
+                test: /\.js$/i,
+                exclude: path.join(__dirname, 'node_modules'),
+                use: [{
+                  loader: 'babel-loader',
+                }]
+              },
         ]
     }
 }
