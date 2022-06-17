@@ -6,3 +6,15 @@ marquee()
 
 import "./styles/index.css";
 import "./styles/tab.less";
+
+import gifSrc from './assets/1.gif'
+import pngSrc from './assets/logo_small.png'
+//7.2 创建图片的节点
+const gif = document.createElement('img');
+const png = document.createElement('img');
+//7.3 给src赋值
+gif.src = gifSrc;
+png.src = pngSrc;
+//7.4 插入节点
+document.body.appendChild(gif);
+document.body.appendChild(png);
