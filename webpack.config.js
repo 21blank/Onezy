@@ -28,10 +28,9 @@ module.exports = {
             use: [ "style-loader", "css-loader"]//解析规则从后往前
           },
           {
-                test: /\.less$/,
-                // 使用less-loader, 让webpack处理less文件, 内置还会用less翻译less代码成css内容
-                use: [ "style-loader", "css-loader", 'less-loader']
-           }
+            test: /\.less$/,
+            use: [ "style-loader", "css-loader", 'less-loader']
+          },
         ]
     }
 }
