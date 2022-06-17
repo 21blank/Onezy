@@ -16,5 +16,9 @@ module.exports = {
             template: './public/index.html',//建议绝对路径 相对有时会出错 以那个模板执行
             filename: 'index.html'
           })
-    ]
+    ],
+    devServer: {
+        port: 3000, // 端口号
+        open: true
+    }
 }
